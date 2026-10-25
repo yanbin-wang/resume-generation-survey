@@ -71,9 +71,9 @@ MIT，pipx / pip 安装，附带本地浏览器面板；可选上传 Google Driv
 
 ### 3.4 resi-builder
 
-不是一个产品，而是 **Python 库 / 构建块**。提供 `build_resume_preview` 与 `build_resume_pdf`，输入 JD 与用户历史数据，输出预览和 PDF。
+不是一个产品，而是 **Python 库 / 构建块**。提供简历与求职信的自动生成接口，输入 JD 与用户历史数据，输出预览和 PDF。
 
-抽象程度低、示例简单，适合做自己系统的渲染层，不适合直接给用户用。维护状态未确认。
+抽象程度低、示例简单，适合做自己系统的渲染层，不适合直接给用户用。当前版本 1.4.0（PyPI）。
 
 ### 3.5 StackResume
 
@@ -90,14 +90,34 @@ GPL-3.0，Docker 单命令启动。自称 "ATS-optimised"，但未见独立检�
 | Resume-Libre | github.com/EmaadAkhter/Resume-Libre（S5/S6） | React 19 + FastAPI + Supabase + LaTeX(Tectonic) | AI 生成、导入、JD 定制、LaTeX PDF、版本控制、公开发布 | 31 项确定性检查（6 类） | AGPL-3.0 | Docker Compose；DEMO_MODE 免 Key | 可部署 |
 | resume-builder-llm | github.com/jaganraajan/resume-builder-llm（S7） | Next.js 15 + TS + Vercel AI SDK | 简历定制、求职信、ATS 评分、实时预览、Master Profile | 内置 ATS Score Calculator | 未标注 | 本地 npm | 可部署（需 Key） |
 | jobjob | pypi.org/project/jobjob/（S8） | Python ≥3.12；Claude | JD → 简历 + 求职信 + 技能差距 | 未提及 | MIT | pipx + 本地面板 | 可部署 |
-| resi-builder | pypi.org/project/resi-builder/（S9） | Python 库 | 预览 / PDF 两个接口 | 未提及 | 未标注 | Python 包 | 早期库 |
+| resi-builder | pypi.org/project/resi-builder/（S9） | Python 库 | 简历与求职信自动生成接口 | 未提及 | 未标注 | Python 包 | 早期库 |
 | StackResume | github.com/Sathvik-Rao/StackResume（S10） | LangGraph 多代理；多模型 / Ollama | 一句话生成、JD 定制、多格式输出、投递跟踪 | 自称 "ATS-optimised" | GPL-3.0 | Docker；可离线 | 可部署 |
+
+### 3.7 补充扫描：GitHub 高星项目（2026-10-25，GitHub Search API 按星数排查）
+
+上一轮筛选只覆盖了中小型工具，漏掉了一批高星与「job agent」形态的项目。按星数排序，星数为 2026-10-25 快照：
+
+| 名称 | 星数 | 定位 | 与本调查的关系 |
+|---|---|---|---|
+| [career-ops](https://github.com/career-ops-hq/career-ops) | 77.0k | 全自动求职 agent：扫描职位板，按 CV 对每个岗位打 1–5 分 | 把「生成」扩展成「发现→评估→投递」全流程，是最完整的工程实现 |
+| [ai-job-search](https://github.com/ai-job-search-dev/ai-job-search) | 65.0k | 基于 Claude Code 的求职申请框架，本地运行 | 同上，Claude 生态版本 |
+| [Resume-Matcher](https://github.com/srbhr/Resume-Matcher) | 28.9k | 本地 AI 简历构建，支持 100+ LLM | 本领域星数最高的纯简历工具，PDF/求职信一体 |
+| [open-resume](https://github.com/xitanggg/open-resume) | 8.9k | 简历构建器 + 简历解析器 | 解析器部分可复用为生成系统的输入层 |
+| [resume-tailoring-skill](https://github.com/varunr89/resume-tailoring-skill) | 797 | Claude Code 的简历定制 skill | 「skill 化」形态的代表 |
+| [dossier](https://github.com/AienTech/dossier) | 477 | 自托管求职应用，从个人档案生成定制简历与求职信 | 「档案 → 简历」路线的工程近似 |
+| [resume-lm](https://github.com/olyaiy/resume-lm) | 332 | 开源 AI 简历构建器（Next.js 15） | 与 Resume-Libre 同类，可对照 |
+| [claude-resume-kit](https://github.com/ARPeeketi/claude-resume-kit) | 298 | 一次抽取论文，为每个 JD 生成定制 LaTeX 简历 | **自带防编造控制（anti-fabrication）**，学术人群专用 |
+| [job-hunt-copilot](https://github.com/spontaneousai/job-hunt-copilot) | 271 | 中文：个人项目素材库 → 按岗位生成定制简历、面试讲稿 | **最接近「长期职业库」的中文工程实现**，值得细看 |
+| [resume-jd-optimizer-cn](https://github.com/coinluu/resume-jd-optimizer-cn) | 197 | 中文：解析 JD、诊断简历缺口、生成优化建议 | 中文 JD 对齐的代表 |
+| [resume-builder-skill](https://github.com/Jichengyuuuuu/resume-builder-skill) | 175 | 中文：模糊背景信息 → 专业中文简历（HTML+DOCX），支持 ATS | 中文生成 + ATS 优化 |
+
+**读法**：career-ops / ai-job-search 说明行业已经从「单次生成」走到「agent 全流程」；job-hunt-copilot 说明「长期职业库」这个学术空白在中文社区已有民间实现；claude-resume-kit 的防编造控制与 ResumeFlow 的幻觉指标是同一问题的工程解法。这 11 个项目深挖后可各自升级为正式条目（补台账编号 + 简介）。
 
 ---
 
 ## 四、机会与空白
 
-- **跨职位长期职业库没有成熟产品**：学术侧有原型（Career-Aware），工程侧最近只是「主档案」这种轻量近似。
+- **跨职位长期职业库没有成熟产品**：学术侧有原型（Career-Aware），工程侧最接近的是 job-hunt-copilot（中文，271 星）的「素材库 → 定制简历」与 resume-builder-llm 的「主档案」，均为轻量近似。
 - **低经验匹配退化没有工程解法**：学术侧已暴露（−8.0），工程侧无对应机制。
 - **版本管理与简历历史普遍薄弱**：多数工具聚焦单次生成，只有 Resume-Libre 做出完整版本控制。
 - **确定性检查 + LLM 修复的闭环值得复用**：31 项规则检查是当前最可借鉴的工程质量设计。
@@ -116,8 +136,14 @@ GPL-3.0，Docker 单命令启动。自称 "ATS-optimised"，但未见独立检�
 | S6 | Resume-Libre 技术栈 | 同 S5 | 仓库/文档 | 已读 README | — |
 | S7 | resume-builder-llm：技术栈、Master Profile、ATS 评分 | https://github.com/jaganraajan/resume-builder-llm | 仓库/文档 | 已读 README | 2026-01 更新 |
 | S8 | jobjob：Claude、pipx、MIT、`jobjob build` | https://pypi.org/project/jobjob/ | 包文档 | 已读 PyPI | 版本 3.0.1 |
-| S9 | resi-builder：两个接口 | https://pypi.org/project/resi-builder/1.1.0/ | 包文档 | 已读 PyPI | 版本 1.1.0；维护状态未确认 |
+| S9 | resi-builder：简历与求职信自动生成库 | https://pypi.org/project/resi-builder/ | 包文档 | 已读 PyPI | 当前版本 1.4.0；仓库 github.com/cerdamario13/resi-builder |
 | S10 | StackResume：LangGraph、Docker、Ollama、GPL-3.0 | https://hub.docker.com/r/sathvikrao/stackresume | 仓库/文档 | 已读 Docker Hub | 源仓库 github.com/Sathvik-Rao/StackResume |
+| S11 | Resume-Matcher：本地 AI 简历构建，100+ LLM（28.9k 星） | https://github.com/srbhr/Resume-Matcher | 仓库 | GitHub API 元数据核实 | 2026-10-25 星数快照；深入简介待补 |
+| S12 | career-ops：全自动求职 agent（77k 星） | https://github.com/career-ops-hq/career-ops | 仓库 | GitHub API 元数据核实 | 同上 |
+| S13 | ai-job-search：Claude Code 求职框架（65k 星） | https://github.com/ai-job-search-dev/ai-job-search | 仓库 | GitHub API 元数据核实 | 同上 |
+| S14 | open-resume：简历构建器 + 解析器（8.9k 星） | https://github.com/xitanggg/open-resume | 仓库 | GitHub API 元数据核实 | 同上 |
+| S15 | job-hunt-copilot：中文素材库 → 定制简历/面试讲稿（271 星） | https://github.com/spontaneousai/job-hunt-copilot | 仓库 | GitHub API 元数据核实 | 最接近「长期职业库」的中文实现 |
+| S16 | 补充扫描其余 6 项（resume-tailoring-skill / dossier / resume-lm / claude-resume-kit / resume-jd-optimizer-cn / resume-builder-skill） | 见 3.7 表内各链接 | 仓库 | GitHub API 元数据核实 | 星数快照 2026-10-25 |
 
 ---
 
