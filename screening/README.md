@@ -1,6 +1,6 @@
 # 简历筛选（招聘方侧）
 
-> 负责人：待指派　|　截止：2026-10-25　|　本页来源编号 S1–S19，仅本页内有效
+> 负责人：待指派　|　截止：2026-10-25　|　本页来源编号 S1–S22，仅本页内有效
 >
 > **核实状态（2026-10-25 更新）**：原 6 条论文线索已核实 4 条（S1、S2 精确命中；S5 精确命中；S3 找到最接近项）；工具 5 个的 PyPI/GitHub 地址全部验明正身；另新增 4 篇论文、4 个工具。仅 S4、S6 两条线索仍未找到原文。
 
@@ -106,6 +106,9 @@ PyPI `ai-recruitment-agent` 0.3.2「CV screening CLI — ranks candidates agains
 | 名称 | 星数 | 定位 | 链接 |
 |---|---|---|---|
 | Automated-Resume-Screening-System | 482 | 经典 ML 筛选系统（带数据集） | [JAIJANYANI/Automated-Resume-Screening-System](https://github.com/JAIJANYANI/Automated-Resume-Screening-System) |
+| candisift | 6 | 开源 AI ATS：LLM 筛选 + CV 解析 + JD↔候选人匹配 + **bias-audited ranking** | [confused-ai/candisift](https://github.com/confused-ai/candisift) |
+| AI-Recruitment-Agent | 52 | 微软 AutoGen 多智能体招聘助手 | [Ancastal/AI-Recruitment-Agent](https://github.com/Ancastal/AI-Recruitment-Agent) |
+| RSART | 16 | 简历短列表与排序工具 | [PawanRamaMali/Resume-Shortlisting-and-Ranking-Tool](https://github.com/PawanRamaMali/Resume-Shortlisting-and-Ranking-Tool) |
 | resume-job-matcher | 273 | TS CLI：**硬约束先淘汰，再打分**，每条判断带证据 | [sliday/resume-job-matcher](https://github.com/sliday/resume-job-matcher) |
 | Resume-Screening-RAG-Pipeline | 190 | RAG 聊天机器人动态检索简历做筛选 | [Hungreeee/Resume-Screening-RAG-Pipeline](https://github.com/Hungreeee/Resume-Screening-RAG-Pipeline) |
 | mcp_resume_screening（LlamaIndex 官方） | 14 | 远程 MCP：从代码库找最合格候选人 | [run-llama/mcp_resume_screening](https://github.com/run-llama/mcp_resume_screening) |
@@ -125,6 +128,9 @@ PyPI `ai-recruitment-agent` 0.3.2「CV screening CLI — ranks candidates agains
 | resume-job-matcher | [GitHub](https://github.com/sliday/resume-job-matcher)（S17） | TypeScript CLI | 硬约束前置淘汰 + 证据打分 | 两段式降本 | GitHub 已核实 |
 | Resume-Screening-RAG-Pipeline | [GitHub](https://github.com/Hungreeee/Resume-Screening-RAG-Pipeline)（S18） | RAG | 聊天式动态检索筛选 | 检索增强 | GitHub 已核实 |
 | Automated-Resume-Screening-System | [GitHub](https://github.com/JAIJANYANI/Automated-Resume-Screening-System)（S19） | 经典 ML | 传统 ML 筛选，带数据集 | 教学参考 | GitHub 已核实 |
+| candisift | [GitHub](https://github.com/confused-ai/candisift)（S20） | Python | LLM 筛选 + 解析 + 匹配 + 偏见审计排序 | **唯一自带 bias-audit 的** | GitHub 已核实 |
+| AI-Recruitment-Agent | [GitHub](https://github.com/Ancastal/AI-Recruitment-Agent)（S21） | AutoGen 多智能体 | 招聘全流程助手 | 多智能体形态 | GitHub 已核实 |
+| RSART | [GitHub](https://github.com/PawanRamaMali/Resume-Shortlisting-and-Ranking-Tool)（S22） | Python | 短列表与排序 | 轻量 | GitHub 已核实 |
 
 ---
 
@@ -132,7 +138,7 @@ PyPI `ai-recruitment-agent` 0.3.2「CV screening CLI — ranks candidates agains
 
 - **稳定性 / 效度审计几乎没有产品化**：学术侧已有 ground truth 审计框架（S5），工程侧只有 shortlist-ai 的 evals/bias tests 沾边——把「审计」做成产品的空白最大。
 - **对抗攻击防御在产品里完全缺位**：论文证明 >80% 攻击成功率（S7），9 个工具没有一个提到防注入。
-- **偏见审计缺位**：talent-lens 的院校/大厂维度天然带偏见，未见配套偏差报告。
+- **偏见审计刚有雏形**：candisift 自称「bias-audited ranking」，是 13 个工具里唯一提偏见审计的（实现深度待读源码）；talent-lens 的院校/大厂维度反而天然带偏见。对照 S5 的审计框架，这块仍是最大空白。
 - **与生成侧共用内核**：两侧都需要「JD 解析 → 结构化匹配」，目前没有工具同时服务两侧（cvz 最接近）。
 
 ---
@@ -160,6 +166,9 @@ PyPI `ai-recruitment-agent` 0.3.2「CV screening CLI — ranks candidates agains
 | S17 | resume-job-matcher：硬约束前置 + 证据打分 | https://github.com/sliday/resume-job-matcher | 仓库 | 已核实 | 273 星 |
 | S18 | Resume-Screening-RAG-Pipeline | https://github.com/Hungreeee/Resume-Screening-RAG-Pipeline | 仓库 | 已核实 | 190 星 |
 | S19 | Automated-Resume-Screening-System | https://github.com/JAIJANYANI/Automated-Resume-Screening-System | 仓库 | 已核实 | 482 星，带数据集 |
+| S20 | candisift：开源 AI ATS，自称 bias-audited ranking | https://github.com/confused-ai/candisift | 仓库 | 已核实 | 6 星；「偏见审计」具体实现待读源码 |
+| S21 | AI-Recruitment-Agent：AutoGen 多智能体招聘助手 | https://github.com/Ancastal/AI-Recruitment-Agent | 仓库 | 已核实 | 52 星 |
+| S22 | RSART：Resume Shortlisting And Ranking Tool | https://github.com/PawanRamaMali/Resume-Shortlisting-and-Ranking-Tool | 仓库 | 已核实 | 16 星 |
 
 ---
 
