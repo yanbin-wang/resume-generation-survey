@@ -4,8 +4,8 @@
 
 | 方向 | 服务对象 | 文档 | 负责人 | 状态 |
 |---|---|---|---|---|
-| 简历生成（tailoring / generation） | 候选人 | [generation/README.md](generation/README.md) | 待指派 | 论文 2 篇 + 工具 5 个，已核实 S1–S10 |
-| 简历筛选（screening / ranking） | 招聘方 | [screening/README.md](screening/README.md) | 待指派 | 论文 6 篇 + 工具 5 个，**来源链接全部待补** |
+| 简历生成（tailoring / generation） | 候选人 | [generation/README.md](generation/README.md) | 待指派 | 论文 2 篇 + 工具 5 个（已核实）+ GitHub 补充扫描 11 项 |
+| 简历筛选（screening / ranking） | 招聘方 | [screening/README.md](screening/README.md) | 待指派 | 论文 10 篇（8 篇已核实）+ 工具 9 个（全部验明地址） |
 
 ## 两方向怎么区分
 
