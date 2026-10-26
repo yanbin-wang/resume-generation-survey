@@ -134,6 +134,9 @@ PyPI `ai-recruitment-agent` 0.3.2「CV screening CLI — ranks candidates agains
 
 ---
 
+
+> 🧪 **实测报告**：[tools-test-report.md](../tools-test-report.md)（2026-10-26，源码核实 + 无 Key 动态测试；cvz 全链路已测）
+
 ## 四、机会与空白
 
 - **稳定性 / 效度审计几乎没有产品化**：学术侧已有 ground truth 审计框架（S5），工程侧只有 shortlist-ai 的 evals/bias tests 沾边——把「审计」做成产品的空白最大。
