@@ -115,6 +115,9 @@ GPL-3.0，Docker 单命令启动。自称 "ATS-optimised"，但未见独立检�
 
 ---
 
+
+> 🧪 **实测报告**：[tools-test-report.md](../tools-test-report.md)（2026-10-26，源码核实 + 无 Key 动态测试；cvz 全链路已测）
+
 ## 四、机会与空白
 
 - **跨职位长期职业库没有成熟产品**：学术侧有原型（Career-Aware），工程侧最接近的是 job-hunt-copilot（中文，271 星）的「素材库 → 定制简历」与 resume-builder-llm 的「主档案」，均为轻量近似。
