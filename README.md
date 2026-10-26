@@ -24,6 +24,9 @@
 - 「待补」条目不得在正文被当作已核实事实引用。
 - 预印本必须标注「预印本，未确认正式发表」。
 
+
+> 🧪 **实测报告**：[tools-test-report.md](tools-test-report.md)（2026-10-26）
+
 ## 待办
 
 见仓库 Issues：来源补齐（#6）、筛选工具实测（#7）、ResumeFlow demo 状态（#1）、Career-Aware 发表状态（#2）等。
